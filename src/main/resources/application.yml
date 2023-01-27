@@ -1,3 +1,7 @@
+server:
+  port: 8083
+
+
 debug: false
 management:
   endpoints:
@@ -17,6 +21,9 @@ spring:
     url: jdbc:mysql://localhost:3306/article_test
     username: chorok
     password: chorok
+#    url : jdbc:h2:mem:testdb
+#    username: sa
+#    driver-class-name: org.h2.Driver
 
   jpa:
     # ???? ??? ??? ??? ??
@@ -30,9 +37,9 @@ spring:
   h2.console.enable : false
   sql.init.mode : always
 
-data.rest:
-  base-path: /api
-  detection-strategy : annotated
+#data.rest:
+#  base-path: /api
+#  detection-strategy : annotated
 ---
 #spring:
 #  config:
@@ -43,7 +50,4 @@ data.rest:
 #    driverClassName : org.h2.Driver
 #  sql.init.mode : always
 #  test.database.replace : none
-#
-server:
-  port: 8083
 
